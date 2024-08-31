@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Enerji_İş_Sendikası.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; 
+    }
+
+    #form1 {
+        height: 100%;
+    }
+
+    #container1 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    #header {
+        background-color: #0F125D;
+        padding: 15px; 
+        display: flex;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 10px 15px; 
+        font-size: 1rem; 
+        min-width: 120px; 
+    }
+
+     .center{
+                margin-left:35%;
+                margin-bottom:5%;
+                width:25%
+            }
+</style>
+</head>
+<body>
+<form id="form1" runat="server">
+    <div id="container1">
+        <div id="header">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <asp:Image ID="Image1" runat="server" Height="70px" Width="80px" ImageUrl="https://enerjiis.org.tr/tema/genel/uploads/logo/Enerji-logo.png" BackColor="#CCCCCC"  />
+            <asp:Label ID="Label1" runat="server" Text="ENERJİ İŞ SENDİKASI" ForeColor="White" Font-Bold="True" Font-Size="Large" style="margin-left: 15px;"></asp:Label>
+            <asp:Button ID="Button1" runat="server" Text="Anasayfa" CssClass="btn btn-primary" style="margin-left: 15px;" BackColor="#0056B3" ForeColor="White" OnClick="Button1_Click"  />
+            <asp:Button ID="Button2" runat="server" Text="Makaleler" CssClass="btn btn-primary" style="margin-left: 15px;" BackColor="#0056B3" ForeColor="White" OnClick="Button2_Click" />
+             <div style="margin-left: auto;">
+            <asp:Button ID="KayitOl" runat="server" Text="Kayıt Ol" CssClass="btn btn-primary" style="margin-left: 15px;" BackColor="#009933" ForeColor="White" OnClick="KayitOl_Click"    />
+            <asp:Button ID="GirisYap" runat="server" Text="Giriş Yap" CssClass="btn btn-primary" style="margin-left: 15px;" BackColor="#0066CC" ForeColor="White" OnClick="GirisYap_Click" />
+            
+       </div>
+   
+        </div>
+           <div class="container">
+     
+  <div class="row justify-content-center mt-4"> 
+    <div class="col-lg-8">
+      <div class="p-5 shadow rounded-lg position-relative"> 
+        <img src="https://www.enerjiis.org.tr/tema/genel/uploads/logo/Enerji-logo.png" alt="" class="center"> <!-- Resmi ortalamak için text-center sınıfını ekledik -->
+          <h2>Neyi Amaçlıyoruz?</h2>
+          <p>Sendikacılığın önemini kavrayan, nitelikli ve vizyon sahibi akademili öğrencilere veya ilgili 
+            mezunlara kariyer sağlamayı hedefleyen, sendikaların da nitelikli ve ilgili alanda uzman 
+            kişilerle buluşmasını sağlayan, sendikal hareketle akademinin özgür bir platformda buluşturularak
+            Türk sendikacılığına katkı sunmayı hedefler. Enerji iş akademi özgür bir platform olmakla
+            birlikte, ilgili alanlarda çalışmak isteyen kişilerin bir kuruma bağlılığı gözetilmeden, 
+            fikirlerini bağımsız bir şekilde ifade edebilecekleri bir platform olma özelliğini taşımaktadır.
+            Gönderilen yazılar herhangi bir forma sıkıştırılmak mecburiyetinde olmamakla birlikte yazıların
+            orijinalliği esas alınacaktır. Akademimiz, Türk sendikacılığına katkı sağlamak isteyen tüm 
+            kişilerin kullanımına sunulmuştur.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+    
+    
+</form>
+</body>
+</html>
